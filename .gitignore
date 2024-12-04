@@ -1,5 +1,11 @@
+# Jupyter
+.ipynb_checkpoints
+
 # macOS
 .DS_Store
+
+# npm
+node_modules
 
 # PyCharm
 .idea/
