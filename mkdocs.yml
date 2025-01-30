@@ -36,7 +36,6 @@ theme:
     text: Mulish
     code: Roboto Mono
   icon:
-    #logo: easycrystallography
     edit: material/file-edit-outline
   favicon: assets/images/favicon.png
   logo_dark_mode: assets/images/logo_dark.svg
@@ -52,9 +51,11 @@ extra:
     - icon: easyscience  # File: overrides/.icons/easyscience.svg
       link: https://easyscience.software
   # Set custom variables to be used in Markdown and HTML files
-  ci_branch: !ENV [CI_BRANCH, master]
-  github_repository: !ENV [GITHUB_REPOSITORY, easyscience/easyscience]
-  release_version: !ENV [RELEASE_VERSION, v0.0.0]
+  vars:
+    ci_branch: !ENV [CI_BRANCH, master]
+    github_repository: !ENV [GITHUB_REPOSITORY, easyscience/easyscience]
+    release_version: !ENV [RELEASE_VERSION, v0.0.0]
+    notebooks_dir: !ENV [NOTEBOOKS_DIR, examples]
 
 # Customization to be included by the theme
 extra_css:
@@ -98,7 +99,7 @@ markdown_extensions:
 plugins:
   - autorefs
   - inline-svg
-  - macros
+  - markdownextradata # Plugin that injects the mkdocs.yml extra variables into the Markdown template
   - mkdocs-jupyter:
       include: ['*.py', '*.ipynb'] # Default: ['*.py', '*.ipynb']
       #ignore: ['*emcee*.ipynb']
