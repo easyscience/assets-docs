@@ -51,7 +51,9 @@ extra:
       link: https://github.com/EasyScience/EasyDiffractionLib
     - icon: easyscience  # File: overrides/.icons/easyscience.svg
       link: https://easyscience.software
+  # Set custom variables to be used in Markdown and HTML files
   ci_branch: !ENV [CI_BRANCH, master]
+  github_repository: !ENV [GITHUB_REPOSITORY, easyscience/easyscience]
   release_version: !ENV [RELEASE_VERSION, v0.0.0]
 
 # Customization to be included by the theme
