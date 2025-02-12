@@ -1,3 +1,14 @@
+# Project information
+site_name: EasyScience Library
+site_url: https://easyscience.github.io/corelib
+
+# Repository
+repo_url: https://github.com/easyscience/corelib
+edit_uri: edit/develop/docs/
+
+# Copyright
+copyright: © 2025 EasyScience
+
 # Sets the theme and theme-specific configuration
 theme:
   name: material
@@ -46,16 +57,14 @@ theme:
 extra:
   generator: false # Disable `Made with Material for MkDocs` (bottom left)
   social: # Icons (bottom right)
-    - icon: fontawesome/brands/github  # Name as in Font Awesome
-      link: https://github.com/EasyScience/EasyDiffractionLib
     - icon: easyscience  # File: overrides/.icons/easyscience.svg
       link: https://easyscience.software
   # Set custom variables to be used in Markdown and HTML files
   vars:
-    ci_branch: !ENV [CI_BRANCH, master]
-    github_repository: !ENV [GITHUB_REPOSITORY, easyscience/easyscience]
-    release_version: !ENV [RELEASE_VERSION, v0.0.0]
-    notebooks_dir: !ENV [NOTEBOOKS_DIR, examples]
+    ci_branch: !ENV ${CI_BRANCH}
+    github_repository: !ENV ${GITHUB_REPOSITORY}
+    release_version: !ENV ${RELEASE_VERSION}
+    notebooks_dir: !ENV ${NOTEBOOKS_DIR}
 
 # Customization to be included by the theme
 extra_css:
@@ -101,11 +110,8 @@ plugins:
   - inline-svg
   - markdownextradata # Plugin that injects the mkdocs.yml extra variables into the Markdown template
   - mkdocs-jupyter:
-      include: ['*.py', '*.ipynb'] # Default: ['*.py', '*.ipynb']
-      #ignore: ['*emcee*.ipynb']
+      include: ['*.py', '*.ipynb']  # Default: ['*.py', '*.ipynb']
       execute: true
-      execute_ignore:
-        - '*emcee*.ipynb'
       allow_errors: false
       include_source: true
       include_requirejs: true # Required for Plotly
@@ -117,6 +123,7 @@ plugins:
   - mkdocstrings:
       handlers:
         python:
+          paths: ["src"] # Change "src" to your actual sources directory
           options:
             show_root_heading: true
             show_source: false
@@ -127,3 +134,4 @@ plugins:
 watch:
   - includes
   - overrides
+  - src

@@ -73,7 +73,7 @@ EasyScience organization using MkDocs:
   cp BrandingResources/EasyDiffraction/logos/edl-logo_light.svg docs/assets/images/easydiffractionlib_light.svg
   cp BrandingResources/EasyDiffraction/icons/ed-icon_256x256.png docs/assets/images/favicon.png
   cp BrandingResources/EasyDiffraction/icons/ed-icon_bw.svg overrides/.icons/easydiffraction.svg
-  cp BrandingResources/EasyScience/icons/es-icon_bw.svg overrides/.icons/easyscience.svg
+  cp BrandingResources/EasyScienceOrg/icons/eso-icon_bw.svg overrides/.icons/easyscience.svg
   ```
 
 ### 5. Build the Static Website
