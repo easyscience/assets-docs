@@ -125,7 +125,7 @@ plugins:
         python:
           paths: ["src"] # Change "src" to your actual sources directory
           options:
-            show_root_heading: true
+            show_root_heading: false
             show_source: false
             show_submodules: true
   - search
