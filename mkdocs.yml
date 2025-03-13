@@ -21,7 +21,7 @@ theme:
     - content.tooltips
     - navigation.footer
     - navigation.indexes
-    - navigation.sections
+    #- navigation.sections
     - navigation.top # Back-to-top button
     - navigation.tracking # Anchor tracking
     - search.highlight
