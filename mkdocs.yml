@@ -125,9 +125,13 @@ plugins:
         python:
           paths: ["src"] # Change "src" to your actual sources directory
           options:
-            show_root_heading: false
-            show_source: false
+            docstring_style: google
+            group_by_category: false
+            heading_level: 1
+            show_root_heading: true
+            show_root_full_path: false
             show_submodules: true
+            show_source: true
   - search
 
 # Determines additional directories to watch when running mkdocs serve
