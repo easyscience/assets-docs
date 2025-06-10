@@ -175,6 +175,22 @@ label.md-nav__title[for="__drawer"] {
   margin-right: -4px;
 }
 
+/* */
+.md-nav__item > .md-nav__link {
+    padding-left: 0.5em; /* Default */
+}
+
+/* Change line height of the tabel cells */
+.md-typeset td,
+.md-typeset th {
+  line-height: 1.25 !important;
+}
+
+/* Change vertical alignment of the icon inside the tabel cells */
+.md-typeset td .twemoji {
+  vertical-align: sub !important;
+}
+
 /* Change the width of the primary sidebar */
 /*
 .md-sidebar--primary {
