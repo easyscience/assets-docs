@@ -207,7 +207,12 @@ label.md-nav__title[for="__drawer"] {
 
 /* Needed for mkdocs-jupyter to show download and other buttons on top of the notebook */
 .md-content__button {
-    position: relative !important;
+  position: relative !important;
+}
+
+/* Background color of the search input field */
+.md-search__input {
+  background-color: var(--md-code-bg-color) !important;
 }
 
 /* Customize default style of mkdocs-jupyter plugin */
@@ -217,13 +222,13 @@ Adjust the margins and paddings to fit the defaults in MkDocs Material and do no
 */
 
 .jupyter-wrapper {
-    width: 100% !important;
-    display: flex !important;
+  width: 100% !important;
+  display: flex !important;
 }
 
 .jp-Notebook {
-    padding: 0 !important;
-    margin-top: -3em !important;
+  padding: 0 !important;
+  margin-top: -3em !important;
 }
 
 /* Custom styles for the CIF files */
