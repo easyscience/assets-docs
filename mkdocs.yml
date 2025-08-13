@@ -112,7 +112,7 @@ plugins:
   - inline-svg
   - markdownextradata # Plugin that injects the mkdocs.yml extra variables into the Markdown template
   - mkdocs-jupyter:
-      include: ['*.py', '*.ipynb']  # Default: ['*.py', '*.ipynb']
+      include: ['*.ipynb']  # Default: ['*.py', '*.ipynb']
       execute: true
       allow_errors: false
       include_source: true
@@ -121,7 +121,7 @@ plugins:
       ignore_h1_titles: true # Use titles defined in the nav section below
       remove_tag_config:
         remove_input_tags:
-          - hide_in_docs
+          - hide-in-docs
   - mkdocstrings:
       handlers:
         python:
