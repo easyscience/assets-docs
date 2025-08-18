@@ -109,6 +109,8 @@ markdown_extensions:
 # A list of plugins (with optional configuration settings) to use when building the site
 plugins:
   - autorefs
+  - htmlproofer:
+      raise_error_after_finish: True
   - inline-svg
   - markdownextradata # Plugin that injects the mkdocs.yml extra variables into the Markdown template
   - mkdocs-jupyter:
