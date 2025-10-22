@@ -220,15 +220,48 @@ label.md-nav__title[for="__drawer"] {
 /* Set the width of the notebook to fill 100% and not reduce by the width of .md-content__button's
 Adjust the margins and paddings to fit the defaults in MkDocs Material and do not crop the label in the header
 */
-
 .jupyter-wrapper {
   width: 100% !important;
   display: flex !important;
 }
-
 .jp-Notebook {
   padding: 0 !important;
   margin-top: -3em !important;
+}
+
+/* Removes jupyter cell prefixes, like In[123]: */
+.prompt,
+.jp-InputPrompt,
+.jp-OutputPrompt {
+  display: none !important;
+}
+
+/* Removes jupyter cell paddings */
+.jp-Cell {
+  padding-left: 0 !important;
+}
+
+/* Removes jupyter output cell padding to align with input cell text */
+.jp-RenderedText {
+  padding-left: 0.85em !important;
+}
+
+/* Extra styling the panda dataframes, on top of the style included in the code */
+table.dataframe {
+  float: left;
+  margin-left: 0.75em !important;
+  font-size: var(--jp-code-font-size) !important;
+  color: var(--md-primary-bg-color) !important;
+  /* Allow table cell wrapping in MkDocs-Jupyter outputs */
+  table-layout: auto !important;
+  width: auto !important;
+}
+
+/* Allow wrap for the last column */
+table.dataframe td:last-child,
+table.dataframe th:last-child {
+  white-space: normal !important;
+  word-break: break-word !important;
 }
 
 /* Custom styles for the CIF files */
