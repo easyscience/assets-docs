@@ -199,11 +199,9 @@ label.md-nav__title[for="__drawer"] {
 */
 
 /* Change the overall width of the page */
-/*
 .md-grid {
-  max-width: 1400px;
+  max-width: 1280px;
 }
-*/
 
 /* Needed for mkdocs-jupyter to show download and other buttons on top of the notebook */
 .md-content__button {
@@ -250,19 +248,24 @@ Adjust the margins and paddings to fit the defaults in MkDocs Material and do no
 table.dataframe {
   float: left;
   margin-left: 0.75em !important;
+  margin-bottom: 0.5em !important;
   font-size: var(--jp-code-font-size) !important;
   color: var(--md-primary-bg-color) !important;
   /* Allow table cell wrapping in MkDocs-Jupyter outputs */
+  /*
   table-layout: auto !important;
   width: auto !important;
+  */
 }
 
 /* Allow wrap for the last column */
+/*
 table.dataframe td:last-child,
 table.dataframe th:last-child {
   white-space: normal !important;
   word-break: break-word !important;
 }
+*/
 
 /* Custom styles for the CIF files */
 
