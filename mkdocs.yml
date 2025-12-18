@@ -65,6 +65,7 @@ extra:
     ci_branch: !ENV ${CI_BRANCH}
     github_repository: !ENV ${GITHUB_REPOSITORY}
     release_version: !ENV ${RELEASE_VERSION}
+    docs_version: !ENV ${DOCS_VERSION}
     notebooks_dir: !ENV ${NOTEBOOKS_DIR}
   # Renders a version selector in the header
   version:
