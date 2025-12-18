@@ -66,6 +66,9 @@ extra:
     github_repository: !ENV ${GITHUB_REPOSITORY}
     release_version: !ENV ${RELEASE_VERSION}
     notebooks_dir: !ENV ${NOTEBOOKS_DIR}
+  # Renders a version selector in the header
+  version:
+    provider: mike
 
 # Customization to be included by the theme
 extra_css:
@@ -111,6 +114,7 @@ plugins:
   - autorefs
   - inline-svg
   - markdownextradata # Plugin that injects the mkdocs.yml extra variables into the Markdown template
+  - mike # Plugin that makes it easy to deploy multiple versions of the docs 
   - mkdocs-jupyter:
       include: ['*.ipynb']  # Default: ['*.py', '*.ipynb']
       execute: true
